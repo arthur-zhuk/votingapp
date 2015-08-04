@@ -3,7 +3,7 @@
 angular.module('workspaceApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
-      'title': 'Home',
+      //'title': 'Home',
       'link': '/'
     }];
 
