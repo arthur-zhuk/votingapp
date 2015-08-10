@@ -19,4 +19,9 @@ angular.module('workspaceApp')
     $scope.deleteThing = function(thing) {
       $http.delete('/api/things/' + thing._id);
     };
+    
+    $scope.voter = {
+      likes: 0,
+      disklikes: 0
+    }
   });
