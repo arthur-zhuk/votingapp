@@ -9,10 +9,7 @@ angular.module('workspaceApp')
     });
 
     $scope.addThing = function() {
-      if($scope.newThing === '') {
-        return;
-      }
-      $http.post('/api/things', { name: $scope.newThing });
+      $http.post('/api/things', {name: $scope.newThing });
       $scope.newThing = '';
     };
 
@@ -21,7 +18,7 @@ angular.module('workspaceApp')
     };
     
     $scope.voter = {
-      likes: 0,
+      likes: 2132,
       disklikes: 0
     }
   });
