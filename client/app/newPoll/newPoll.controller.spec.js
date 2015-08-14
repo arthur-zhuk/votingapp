@@ -1,16 +1,16 @@
 'use strict';
 
-describe('Controller: NewpollCtrl', function () {
+describe('Controller: NewPollCtrl', function () {
 
   // load the controller's module
   beforeEach(module('workspaceApp'));
 
-  var NewpollCtrl, scope;
+  var NewPollCtrl, scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    NewpollCtrl = $controller('NewpollCtrl', {
+    NewPollCtrl = $controller('NewPollCtrl', {
       $scope: scope
     });
   }));

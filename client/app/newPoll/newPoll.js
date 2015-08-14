@@ -3,8 +3,8 @@
 angular.module('workspaceApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/newpoll', {
-        templateUrl: 'app/newpoll/newpoll.html',
-        controller: 'NewpollCtrl'
+      .when('/newPoll', {
+        templateUrl: 'app/newPoll/newPoll.html',
+        controller: 'NewPollCtrl'
       });
   });

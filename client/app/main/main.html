@@ -9,10 +9,18 @@
     <button type="submit" class="btn" ng-click="addThing().name">{{voter.likes}} hello</button>
     
     <form class="comment-form" ng-submit="addThing()" name="commentForm">
-    <textarea class="form-control" ng-model="newThing" rows="3" placeholder="Enter a new comment" required></textarea>
-    <input class="btn btn-primary" type="submit" ng-disabled="commentForm.$invalid" value="Post">
+      <textarea class="form-control" ng-model="newThing" rows="3" placeholder="Enter a new comment" required></textarea>
+      <input class="btn btn-primary" type="submit" ng-disabled="commentForm.$invalid" value="Post">
+    </form>
     
-  </form>
+    <ul class="comment-list">
+      <li ng-repeat="thing in awesomeThings">
+        <header>{{ thing.info }}</header>
+        <p>{{ thing.name }}</p>
+      </li>
+    </ul>
+
+    
   </div>
 </header>
 

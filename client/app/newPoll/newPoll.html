@@ -1,0 +1,19 @@
+<div class="col-md-12">
+This is the newPoll view.
+
+
+    <form class="comment-form" ng-submit="postQuestion()" name="questionform">
+      <input class="form-control" ng-model="newQuestion" rows="1" placeholder="Enter a question for your poll." required></textarea>
+      <input class="form-control" ng-model="newSelection1" rows="1" placeholder="Enter a selection for your poll." required></textarea>
+      <input class="form-control" ng-model="newSelection2" rows="1" placeholder="Enter a selection for your poll." required></textarea>
+      <input class="btn btn-primary" type="submit" ng-disabled="commentForm.$invalid" value="Post">
+    </form>
+
+    <ul class="comment-list">
+      <li ng-repeat="poll in pollData">
+        <header>{{ poll.pollQuestion }}</header>
+        <p>{{ poll.pollSelection1 }}</p>
+        <p>{{ poll.pollSelection2 }}</p>
+      </li>
+    </ul>
+</div>
