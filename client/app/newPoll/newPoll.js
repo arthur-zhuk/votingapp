@@ -5,6 +5,8 @@ angular.module('workspaceApp')
     $routeProvider
       .when('/newPoll', {
         templateUrl: 'app/newPoll/newPoll.html',
-        controller: 'NewPollCtrl'
+        controller: 'NewPollCtrl',
+        caseInsensitiveMatch: true,
+        authenticate: true
       });
   });
