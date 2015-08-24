@@ -14,12 +14,12 @@ angular.module('workspaceApp')
       $scope.counter++;
       $scope.placeHolders.push("New Choice " + $scope.counter);
       $scope.choices.push("");
-    }
+    };
     
     $scope.removeChoice = function(index) {
       $scope.placeHolders[index]=null;
       $scope.placeHolders=$scope.placeHolders.filter(function(item){return item !==null});
-    }
+    };
     
     $scope.addPoll = function() {
       $scope.createdTime = new Date();
@@ -32,17 +32,17 @@ angular.module('workspaceApp')
             ownerid: $scope.getCurrentUser().name,
             voted: [],
             created: $scope.createdTime.getTime()
-          }
+          };
           
           $http.post('api/polls', poll).success(function() {
             $scope.placeHolders = ["Red", "Blue"];
             $scope.pollTitle = "";
             $scope.choices = [];
             $scope.counter = 0;
-          })
-        }
-      }
-    }
+          });
+        };
+      };
+    };
     /*
     $scope.postQuestion = function() {
       $http.post('api/polls', {pollQuestion: $scope.newQuestion, pollSelection1: $scope.newSelection1, pollSelection2: $scope.newSelection2, countSel1: $scope.newCountSel1, countSel2: $scope.newCountSel2});

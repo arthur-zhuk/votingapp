@@ -14,6 +14,8 @@
     <!-- build:css(client) app/vendor.css -->
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+      <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+      <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css" />
       <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
@@ -21,10 +23,12 @@
       <!-- injector:css -->
       <link rel="stylesheet" href="app/account/login/login.css">
       <link rel="stylesheet" href="app/admin/admin.css">
+      <link rel="stylesheet" href="app/all/all.css">
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="app/mypolls/mypolls.css">
       <link rel="stylesheet" href="app/newPoll/newPoll.css">
+      <link rel="stylesheet" href="app/view/view.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -62,8 +66,11 @@
       <script src="bower_components/angular-route/angular-route.js"></script>
       <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+      <script src="bower_components/Chart.js/Chart.js"></script>
+      <script src="bower_components/angular-chart.js/angular-chart.js"></script>
       <!-- endbower -->
     <!-- endbuild -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 
         
         <!-- build:js(.tmp) app/app.js -->
@@ -76,10 +83,16 @@
           <script src="app/account/signup/signup.controller.js"></script>
           <script src="app/admin/admin.controller.js"></script>
           <script src="app/admin/admin.js"></script>
+          <script src="app/all/all.controller.js"></script>
+          <script src="app/all/all.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/mypolls/mypolls.controller.js"></script>
+          <script src="app/mypolls/mypolls.js"></script>
           <script src="app/newPoll/newPoll.controller.js"></script>
           <script src="app/newPoll/newPoll.js"></script>
+          <script src="app/view/view.controller.js"></script>
+          <script src="app/view/view.js"></script>
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/modal/modal.service.js"></script>

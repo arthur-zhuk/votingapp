@@ -20,6 +20,30 @@ exports.show = function(req, res) {
   });
 };
 
+exports.showUser = function(req, res) {
+  Poll.find(function (err, polls) {
+    if(err) { return handleError(res, err); }
+    return res.json(
+      polls.filter(function(item){
+        return item.ownerid == req.params.userid;
+      })
+    )
+  });
+};
+
+exports.showRough = function(req, res) {
+  Poll.find(function (err, polls) {
+    if(err) { return handleError(res, err); }
+    return res.json(
+      polls.filter(function(item){
+        return spinalCase(item.owner) == req.params.user;
+      }).filter(function(item){
+        return spinalCase(item.title)==req.params.title;
+      })[0]
+    );
+  });
+};
+
 // Creates a new poll in the DB.
 exports.create = function(req, res) {
   Poll.create(req.body, function(err, poll) {
@@ -57,3 +81,23 @@ exports.destroy = function(req, res) {
 function handleError(res, err) {
   return res.status(500).send(err);
 }
+
+function spinalCase(str) {
+   var valid="abcdefghijklmnopqrstuvwxyz1234567890";
+   var caps="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var space="_ -";
+   var newStr = "";
+   for (var i = 0; i<str.length; i++) {
+     if (caps.indexOf(str[i])!==-1) {
+       if (i!==0 && newStr[newStr.length-1]!=="-") {
+         newStr+="-";
+       }
+       newStr+=str[i].toLowerCase();
+     } else if (valid.indexOf(str[i])==-1) {
+       if (str[i]==" " || str[i]=="_" || str[i] == "-") {
+         newStr+="-";
+       }
+     } else { newStr+=str[i]; }
+   }
+   return newStr;
+ }
