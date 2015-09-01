@@ -13,3 +13,4 @@ npm-debug.log
 /data/workspace-test.0
 /data/workspace-test.ns
 /data/_tmp/
+/data/mongod.lock
