@@ -6,3 +6,9 @@ client/bower_components
 dist
 /server/config/local.env.js
 npm-debug.log
+/data/local.0
+/data/local.ns
+/data/workspace-dev.0
+/data/workspace-dev.ns
+/data/workspace-test.0
+/data/workspace-test.ns
