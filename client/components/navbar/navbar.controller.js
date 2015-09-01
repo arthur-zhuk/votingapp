@@ -8,7 +8,11 @@ angular.module('workspaceApp')
     },
     {
       'title': 'My Polls',
-      'link': '/newPoll'
+      'link': '/mypolls'
+    },
+    {
+      'title': 'All Polls',
+      'link': '/all'
     }];
 
     $scope.isCollapsed = true;

@@ -1,11 +1,12 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
-
+<header class="hero-unit" id="banner">
 <div class="container">
     <h1>Voter</h1>
     <i ng-hide="isLoggedIn()" class="fa fa-line-chart chartIcon"></i>
     <div ng-show="isLoggedIn()"><a href="newpoll/" class="btn btn-primary">New Poll</a>&nbsp;<a href="mypolls/" class="btn btn-success ">My Polls</a>
   </div>
 </div>
+</header>
 
 <div class="container">
     <div class="row mypolls">
