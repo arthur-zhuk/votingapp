@@ -15,14 +15,14 @@ angular.module('workspaceApp')
     });
     
     $scope.vote = function() {
-      if ($scope.poll.voted.indexOf($scope.getCurrentUser()._id) == -1 && $scope.formData.selection !== undefined && $scope.isLoggedIn()) {
+      if ($scope.poll.voted.indexOf($scope.getCurrentUser()._id) === -1 && $scope.formData.selection !== undefined && $scope.isLoggedIn()) {
         $scope.poll.voted.push($scope.getCurrentUser()._id);
         $scope.poll.choices[$scope.formData.selection].votes++;
         console.log($scope.poll.voted);
         $http.delete('api/polls/' + $scope.poll._id).success(function(){
           $http.post('api/polls/', $scope.poll).success(function(poll){
             $scope.poll = poll;
-            console.log("you voted for " + $scope.poll.choices[$scope.formData.selection].name);
+            console.log('you voted for ' + $scope.poll.choices[$scope.formData.selection].name);
             console.log($scope.poll.voted);
             $scope.runChart();
           });
@@ -58,13 +58,13 @@ angular.module('workspaceApp')
 
             }
           });
-    }
+    };
 
     $scope.addChoice = function(){
       if ($scope.isLoggedIn()){
 
-        var newChoice = prompt("What else should be on this poll?");
-        if (newChoice !=="" && newChoice !== null) {
+        var newChoice = prompt('What else should be on this poll?');
+        if (newChoice !== '' && newChoice !== null) {
 
           $scope.poll.choices.push({name: newChoice,votes: 1});
           $scope.poll.voted.push($scope.getCurrentUser()._id);
@@ -73,37 +73,38 @@ angular.module('workspaceApp')
           $http.delete('/api/polls/' + $scope.poll._id).success(function(){
             $http.post('/api/polls',$scope.poll).success(function(poll){
                 $scope.poll=poll;
-                console.log("you voted for " + $scope.poll.choices[$scope.formData.selection].name);
-                console.log($scope.poll.voted)
+                console.log('you voted for ' + $scope.poll.choices[$scope.formData.selection].name);
+                console.log($scope.poll.voted);
 
                 $scope.runChart();
-            })
-          })
+            });
+          });
         }
 
 
       }
 
 
-    }
+    };
 
     $scope.spinalCase = function(str) {
-       var valid="abcdefghijklmnopqrstuvwxyz1234567890";
-       var caps="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-       var space="_ -";
-       var newStr = "";
-       for (var i = 0; i<str.length; i++) {
-         if (caps.indexOf(str[i])!==-1) {
-           if (i!==0 && newStr[newStr.length-1]!=="-") {
-             newStr+="-";
+       var valid='abcdefghijklmnopqrstuvwxyz1234567890';
+       var caps='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+       //var space='_ -';
+       var newStr = '';
+       for (var i = 0; i< str.length; i++) {
+         if (caps.indexOf(str[i]) !== -1) {
+           if (i !== 0 && newStr[newStr.length-1] !== '-') {
+             newStr+='-';
            }
            newStr+=str[i].toLowerCase();
-         } else if (valid.indexOf(str[i])==-1) {
-           if (str[i]==" " || str[i]=="_" || str[i] == "-") {
-             newStr+="-";
+         } else if (valid.indexOf(str[i])===-1) {
+           if (str[i]===' ' || str[i]==='_' || str[i] === '-') {
+             newStr+='-';
            }
          } else { newStr+=str[i]; }
        }
        return newStr;
-     }
+     };
+     
   });
