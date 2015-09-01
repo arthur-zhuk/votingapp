@@ -29,7 +29,8 @@ angular.module('workspaceApp')
           var poll = {
             title: $scope.pollTitle,
             choices: $scope.choices.map(function(item) {return {name: item, votes: 0}}),
-            ownerid: $scope.getCurrentUser().name,
+            ownerid: $scope.getCurrentUser()._id,
+            owner: $scope.getCurrentUser().name,
             voted: [],
             created: $scope.createdTime.getTime()
           };

@@ -11,7 +11,7 @@
     <div class="row mypolls">
         <div class="col-sm-12">
             <h1>Manage Polls</h1>
-            <p ng-show="polls.length===0">
+            <p ng-show="polls.length === 0">
                 No polls available. Create them here <a href="/newpoll">Create Poll.</a>
             </p>
             <ul class="nav nav-tabs nav-stacked col-sm-12" ng-repeat="poll in polls | orderBy:'-created'">

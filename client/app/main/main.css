@@ -32,3 +32,10 @@
 .navbar-text {
     margin-left: 15px;
 }
+
+#chart_div {
+    width: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+}

@@ -3,8 +3,8 @@
 angular.module('workspaceApp')
   .config(function ($routeProvider) {
     $routeProvider
-      .when('/view', {
+      .when('/:user/:pollid', {
         templateUrl: 'app/view/view.html',
-        controller: 'ViewCtrl'
+        controller: 'ViewCtrl',
       });
   });

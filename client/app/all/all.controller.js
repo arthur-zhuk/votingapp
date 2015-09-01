@@ -16,7 +16,7 @@ angular.module('workspaceApp')
        var caps="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
        var space="_ -";
        var newStr = "";
-       for (var i = 0; i<str.length; i++) {
+       for (var i = 0; i< str.length; i++) {
          if (caps.indexOf(str[i])!==-1) {
            if (i!==0 && newStr[newStr.length-1]!=="-") {
              newStr+="-";
