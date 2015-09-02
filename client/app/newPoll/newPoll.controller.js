@@ -44,17 +44,4 @@ angular.module('workspaceApp')
         }
       }
     };
-    /*
-    $scope.postQuestion = function() {
-      $http.post('api/polls', {pollQuestion: $scope.newQuestion, pollSelection1: $scope.newSelection1, pollSelection2: $scope.newSelection2, countSel1: $scope.newCountSel1, countSel2: $scope.newCountSel2});
-      $scope.newQuestion = '';
-      $scope.newSelection1 = '';
-      $scope.newSelection2 = '';
-      $scope.newCountSel1 = 0;
-      $scope.newcountSel2 = 0;
-      
-      $scope.plusOne = function (index) {
-        $scope.newSelection1[index].newCountSel1 += 1;
-      };
-    }; */
 });
