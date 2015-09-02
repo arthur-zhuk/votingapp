@@ -1,7 +1,3 @@
-.thing-form {
-    margin: 20px 0;
-}
-
 #banner {
     border-bottom: none;
     margin-top: -20px;
@@ -19,7 +15,7 @@
     color: #F5F5F5;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    background: gray;
 }
 
 .footer {
@@ -28,14 +24,54 @@
     margin-top: 70px;
     border-top: 1px solid #E5E5E5;
 }
+.pieIcon, .globeIcon, .usersIcon, .chartIcon {
+  font-size: 80pt;
+  padding-bottom: 10pt;
+}
+.pieIcon {
+  color: rgb(49,220,230)
+}
+.globeIcon {
+  color: rgb(101, 230, 150)
+}
+.usersIcon {
+  color: rgb(255,240,120)
+}
+.mypolls .nav li a {
+  float:left;
+}
+.mypolls .nav li a:hover {
+  border-bottom: 0;
+  padding-bottom: 11px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.mypolls .nav li i {
+  position: inline;
+  padding: 12px;
+}
+.mypolls .nav li i:hover{
+  background: rgb(238,238,238);
+  border-radius:5px;
 
-.navbar-text {
-    margin-left: 15px;
+}
+.mypolls .nav, .nav-tabs, .nav-stacked {
+  border-bottom: 0;
+}
+.formchoice i {
+  float: right;
+  margin-top:-18pt;
+  margin-right:10px
+}
+mark {
+  border: 1px dotted #999;
+  border-radius: 2px;
+  background: #FFFFCC;
 }
 
-#chart_div {
-    width: 400px;
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
+#chart_div{
+  width: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

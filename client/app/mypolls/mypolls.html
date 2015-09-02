@@ -16,7 +16,7 @@
                 No polls available. Create them here <a href="/newpoll">Create Poll.</a>
             </p>
             <ul class="nav nav-tabs nav-stacked col-sm-12" ng-repeat="poll in polls | orderBy:'-created'">
-                <li><a ng-href="{{spinalCase(poll.owner) + '/' + poll._id}}" tooltip="{{poll.title}}">{{poll.title}}</a><i style="cursor:pointer; color:indianred" ng-click="deletePoll(poll)" class="fa fa-times"></i></li>
+                <li><a ng-href="{{spinalCase(poll.owner) + '/' + poll._id}}" tooltip="{{poll.title}}">{{poll.title}}</a><i style="cursor:pointer; color:indianred" ng-click="deletePoll(poll)" class="fa fa-times">X</i></li>
             </ul>
         
         </div>

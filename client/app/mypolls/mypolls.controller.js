@@ -10,8 +10,8 @@ angular.module('workspaceApp')
     });
     
     $scope.deletePoll = function(apoll) {
-      $http.delete('api/polls/' + apoll._id).success(function(){
-        $http.get('api/polls/all/' + $scope.getCurrentUser()._id).success(function(Polls) {
+      $http.delete('/api/polls/' + apoll._id).success(function(){
+        $http.get('/api/polls/all/' + $scope.getCurrentUser()._id).success(function(Polls) {
           $scope.polls = Polls;
         });
       });
